@@ -2,7 +2,7 @@ import React from "react";
 
 const Perkenalan = (props) => {
   const handleClick = () => {
-    alert("Halo, saya " + props.nama);
+    console.log("Halo, saya " + props.nama);
   };
 
   return (
@@ -22,7 +22,9 @@ const Perkenalan = (props) => {
       <p>
         <b>Umur:</b> {props.umur}
       </p>
+
       <button onClick={handleClick}>Klik Saya</button>
+      <button onClick={() => handleClick(props.nama)}>Klik Saya</button>
     </div>
   );
 };

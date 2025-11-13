@@ -20,7 +20,7 @@
 // export default App;
 
 import React, { useState } from "react";
-
+import "./App.css";
 export default function HitungAngka() {
   // Buat state bernama "angka" dengan nilai awal 0
   const [angka, setAngka] = useState(0);
@@ -48,7 +48,10 @@ export default function HitungAngka() {
         Tambah
       </button>
       <button onClick={minus}>Minus</button>
-      <h4>angka ini adalah" {angka % 2 == 0 ? "Ganjil" : "Genap"}"</h4>
+      <h4 className={`${angka % 2 == 0 ? "green" : "blue"}`}>
+        {" "}
+        {angka > 10 || <div> okbos</div>}
+      </h4>
     </div>
   );
 }
